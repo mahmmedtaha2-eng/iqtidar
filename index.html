@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مجلة الاقتدار الابتدائية للبنين</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:linear-gradient(135deg,#123c69,#1976a8);color:white;padding:28px 16px;text-align:center}
+.logo{width:90px;height:90px;border-radius:50%;background:white;color:#123c69;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:bold}
+header h1{margin:8px 0;font-size:27px}
+header p{margin:6px 0;opacity:.9}
+nav{position:sticky;top:0;z-index:10;background:white;box-shadow:0 2px 10px #0001;display:flex;flex-wrap:wrap;justify-content:center;gap:7px;padding:10px}
+nav button{border:0;background:#eaf3f9;color:#123c69;border-radius:20px;padding:10px 15px;font-weight:bold;cursor:pointer}
+nav button:hover{background:#1976a8;color:white}
+.container{max-width:1100px;margin:auto;padding:20px 14px}
+.hero{background:white;border-radius:22px;padding:25px;box-shadow:0 6px 22px #00000010;margin-bottom:18px;text-align:center}
+.hero h2{color:#123c69;margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:white;border-radius:18px;padding:20px;box-shadow:0 5px 18px #0000000d;border:1px solid #e5edf5}
+.card h3{margin-top:0;color:#14638d}
+.icon{font-size:35px}
+section{display:none;margin-top:18px}
+section.active{display:block}
+.news{border-right:5px solid #1976a8;margin:12px 0;padding:12px 16px;background:#f8fbfd;border-radius:10px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.photo{height:150px;border-radius:15px;background:linear-gradient(135deg,#dbeeff,#eef7ff);display:flex;align-items:center;justify-content:center;color:#52718a;font-weight:bold}
+table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden}
+th,td{padding:12px;border:1px solid #dde6ee;text-align:center}
+th{background:#123c69;color:white}
+.contact{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.contact a{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:25px;color:white;font-weight:bold}
+.whatsapp{background:#20b85a}.maps{background:#d9534f}
+footer{margin-top:30px;background:#123c69;color:white;text-align:center;padding:25px}
+.small{font-size:13px;color:#65788a}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ا</div>
+  <h1>مجلة الاقتدار الابتدائية للبنين</h1>
+  <p>مجلة إلكترونية مدرسية أسبوعية</p>
+  <p id="date"></p>
+</header>
+
+<nav>
+  <button onclick="show('home')">الرئيسية</button>
+  <button onclick="show('news')">أخبار المدرسة</button>
+  <button onclick="show('students')">نشاطات التلاميذ</button>
+  <button onclick="show('classes')">الرابع والخامس</button>
+  <button onclick="show('arabic')">اللغة العربية</button>
+  <button onclick="show('schedule')">الجدول الأسبوعي</button>
+  <button onclick="show('gallery')">معرض الصور</button>
+  <button onclick="show('contact')">تواصل معنا</button>
+</nav>
+
+<main class="container">
+
+<section id="home" class="active">
+  <div class="hero">
+    <h2>أهلاً بكم في مجلة مدرستنا 🌟</h2>
+    <p>نافذة أسبوعية نعرض من خلالها أخبار المدرسة، نشاطات تلاميذنا، الدروس والفعاليات التعليمية.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><div class="icon">📰</div><h3>العدد الأسبوعي</h3><p>تابعوا آخر أخبار وفعاليات المدرسة.</p></div>
+    <div class="card"><div class="icon">🎓</div><h3>نشاطات التلاميذ</h3><p>مساحة لعرض إبداعات وإنجازات تلاميذنا.</p></div>
+    <div class="card"><div class="icon">📚</div><h3>التعلم</h3><p>دروس ومراجعات مفيدة للصفين الرابع والخامس.</p></div>
+    <div class="card"><div class="icon">📅</div><h3>الجدول الأسبوعي</h3><p>معرفة المواد والفعاليات خلال الأسبوع.</p></div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="hero"><h2>📰 أخبار المدرسة</h2><p>العدد الأسبوعي من مجلة الاقتدار.</p></div>
+  <div class="news"><b>فعالية الأسبوع:</b> متابعة النشاطات التعليمية والثقافية داخل المدرسة.</div>
+  <div class="news"><b>كلمة المدرسة:</b> بالعلم والأخلاق نبني جيلاً يفتخر به الوطن.</div>
+  <div class="news"><b>إعلان:</b> يمكن تحديث هذه الأخبار أسبوعياً وإضافة صور الفعاليات.</div>
+</section>
+
+<section id="students">
+  <div class="hero"><h2>🎨 نشاطات التلاميذ</h2><p>هنا نعرض المشاركات والإنجازات والفعاليات.</p></div>
+  <div class="cards">
+    <div class="card"><h3>🏆 إنجازات</h3><p>إضافة أسماء التلاميذ والجوائز والإنجازات.</p></div>
+    <div class="card"><h3>✏️ مسابقات</h3><p>المسابقات العلمية والثقافية واللغوية.</p></div>
+    <div class="card"><h3>🌱 فعاليات</h3><p>الأنشطة المدرسية والبيئية والاجتماعية.</p></div>
+  </div>
+</section>
+
+<section id="classes">
+  <div class="hero"><h2>📚 الصف الرابع والخامس</h2></div>
+  <div class="cards">
+    <div class="card"><h3>الصف الرابع الابتدائي</h3><p>دروس، واجبات، مراجعات ونشاطات خاصة بالصف الرابع.</p></div>
+    <div class="card"><h3>الصف الخامس الابتدائي</h3><p>دروس، واجبات، مراجعات ونشاطات خاصة بالصف الخامس.</p></div>
+  </div>
+</section>
+
+<section id="arabic">
+  <div class="hero"><h2>📖 اللغة العربية</h2><p>مادة أسبوعية مبسطة لتلاميذنا.</p></div>
+  <div class="card">
+    <h3>كان وأخواتها</h3>
+    <p>تدخل كان وأخواتها على الجملة الاسمية، فترفع المبتدأ ويسمى اسمها، وتنصب الخبر ويسمى خبرها.</p>
+    <p><b>مثال:</b> كانَ الطالبُ مجتهدًا.</p>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="hero"><h2>📅 الجدول الأسبوعي</h2><p>يمكن تعديل المواد حسب جدول المدرسة.</p></div>
+  <table>
+    <tr><th>اليوم</th><th>المادة الأولى</th><th>المادة الثانية</th><th>المادة الثالثة</th></tr>
+    <tr><td>الأحد</td><td>اللغة العربية</td><td>الرياضيات</td><td>العلوم</td></tr>
+    <tr><td>الاثنين</td><td>الرياضيات</td><td>اللغة العربية</td><td>التربية الإسلامية</td></tr>
+    <tr><td>الثلاثاء</td><td>العلوم</td><td>اللغة العربية</td><td>الرياضيات</td></tr>
+    <tr><td>الأربعاء</td><td>اللغة العربية</td><td>الاجتماعيات</td><td>الرياضيات</td></tr>
+    <tr><td>الخميس</td><td>مراجعة</td><td>نشاط</td><td>تربية فنية</td></tr>
+  </table>
+</section>
+
+<section id="gallery">
+  <div class="hero"><h2>🖼️ معرض الصور</h2><p>ضع صور النشاطات المدرسية هنا لاحقاً.</p></div>
+  <div class="gallery">
+    <div class="photo">صورة نشاط 1</div>
+    <div class="photo">صورة نشاط 2</div>
+    <div class="photo">صورة نشاط 3</div>
+    <div class="photo">صورة نشاط 4</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="hero"><h2>📍 تواصل معنا</h2><p>يمكنك استبدال الروابط أدناه بروابطك الخاصة.</p>
+  <div class="contact">
+    <a class="whatsapp" href="https://wa.me/" target="_blank">💬 واتساب</a>
+    <a class="maps" href="https://maps.google.com/" target="_blank">📍 موقع المدرسة</a>
+  </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>مدرسة الاقتدار الابتدائية للبنين</div>
+  <div class="small">عدد زوار هذه الجلسة: <span id="visits">1</span></div>
+  <div class="small">© المجلة الإلكترونية المدرسية</div>
+</footer>
+
+<script>
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function updateDate(){
+  const d=new Date();
+  document.getElementById('date').textContent=d.toLocaleDateString('ar-IQ',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+' — '+d.toLocaleTimeString('ar-IQ',{hour:'2-digit',minute:'2-digit'});
+}
+updateDate(); setInterval(updateDate,1000);
+let v=Number(localStorage.getItem('schoolMagazineVisits')||0)+1;
+localStorage.setItem('schoolMagazineVisits',v);
+document.getElementById('visits').textContent=v;
+</script>
+</body>
+</html>
