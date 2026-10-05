@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>مجلة مدرسة الاقتدار الابتدائية للبنين</title>
+<title>مجلة مدرسة الاقتدار الابتدائية للبنين</title><link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3A86FF">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#FFF9E8;--ink:#1B1B3A;--sun:#FFD23F;--sea:#3A86FF;--pink:#FF5D8F;--mint:#2EC4B6;--card:#fff;--soft:#FFF1B8;--muted:#555a7a;--line:#e6dcae;
@@ -143,4 +144,4 @@ $('bReset').onclick=function(){if(confirm('استرجاع النسخة الأص�
 document.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b||ed)return;var q=b.closest('.q');if(q.dataset.done)return;var all=[].slice.call(q.querySelectorAll('.opt')),i=all.indexOf(b),ok=+q.dataset.ans;q.dataset.done=1;b.classList.add(i===ok?'good':'bad');all[ok].classList.add('good');if(i===ok)q.dataset.right=1;$('score').textContent='نتيجتك: '+main.querySelectorAll('.q[data-right]').length+' من 5'});
 fixLinks();tab('home');tick();setInterval(tick,1000);
 })();
-</script></body></html>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js')}</script></script></body></html>
