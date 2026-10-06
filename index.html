@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b5e55">
+<meta name="description" content="المجلة الإلكترونية لمدرسة الاقتدار الابتدائية للبنين">
+<title>مجلة مدرسة الاقتدار الابتدائية للبنين</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#0b5e55;--green2:#168276;--gold:#d9a441;
+  --cream:#fffaf0;--ink:#17332f;--white:#fff;
+  --shadow:0 10px 30px rgba(15,55,50,.10);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:Tahoma,"Arial",sans-serif;background:#f4f8f7;color:var(--ink);
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+.container{width:min(1150px,92%);margin:auto}
+
+.topbar{background:var(--green);color:#fff;font-size:14px}
+.topbar .container{display:flex;justify-content:space-between;gap:15px;padding:8px 0;flex-wrap:wrap}
+
+header{
+  background:linear-gradient(135deg,#0b5e55,#168276);
+  color:#fff;padding:22px 0;box-shadow:var(--shadow)
+}
+.brand{display:flex;align-items:center;gap:18px}
+.logo{
+  width:82px;height:82px;border-radius:50%;background:#fff;color:var(--green);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-weight:bold;font-size:13px;border:4px solid rgba(255,255,255,.7);
+  overflow:hidden;flex:none
+}
+.logo img{width:100%;height:100%;object-fit:contain}
+.brand h1{font-size:clamp(22px,4vw,38px);margin-bottom:3px}
+.brand p{font-size:15px;opacity:.92}
+
+nav{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 15px rgba(0,0,0,.08)}
+.nav-inner{display:flex;gap:8px;overflow-x:auto;padding:9px 0;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-inner a{
+  white-space:nowrap;padding:9px 14px;border-radius:12px;color:var(--green);
+  font-weight:bold;font-size:14px
+}
+.nav-inner a:hover,.nav-inner a.active{background:#e6f3f1}
+
+.hero{
+  padding:55px 0 35px;
+  background:radial-gradient(circle at 10% 10%,#fff4cf 0 12%,transparent 32%),
+             linear-gradient(180deg,#edf8f6,#f4f8f7)
+}
+.hero-card{
+  background:#fff;border-radius:28px;padding:35px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:1.4fr .8fr;gap:30px;align-items:center;
+  border:1px solid #e1eeec
+}
+.badge{display:inline-block;background:#fff2cf;color:#76520e;padding:6px 13px;border-radius:30px;font-weight:bold;font-size:13px;margin-bottom:12px}
+.hero h2{font-size:clamp(27px,5vw,48px);line-height:1.25;color:var(--green);margin-bottom:15px}
+.hero p{font-size:17px;color:#48615d;margin-bottom:20px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;
+  border-radius:13px;font-weight:bold;border:0
+}
+.btn-primary{background:var(--green);color:#fff}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-light{background:#eaf5f3;color:var(--green)}
+.hero-art{
+  min-height:230px;border-radius:24px;background:linear-gradient(145deg,#0b5e55,#2c9d8f);
+  color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:25px;position:relative;overflow:hidden
+}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.1)}
+.hero-art:before{width:210px;height:210px;top:-90px;left:-70px}
+.hero-art:after{width:170px;height:170px;bottom:-80px;right:-50px}
+.hero-art div{position:relative;z-index:1}
+.hero-art strong{display:block;font-size:55px;line-height:1}
+.hero-art span{font-size:19px;font-weight:bold}
+
+section{padding:42px 0}
+.section-title{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:20px}
+.section-title h2{color:var(--green);font-size:27px}
+.section-title p{color:#71817e;font-size:14px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:#fff;border:1px solid #e4eeec;border-radius:20px;padding:22px;
+  box-shadow:0 7px 22px rgba(15,55,50,.06);transition:.2s
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.icon{
+  width:52px;height:52px;border-radius:15px;background:#e8f5f2;
+  display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:13px
+}
+.card h3{color:var(--green);margin-bottom:7px;font-size:19px}
+.card p{color:#60716e;font-size:14px}
+
+.notice{background:#fffdf4;border-right:5px solid var(--gold)}
+.notice-list{display:grid;gap:10px}
+.notice-item{
+  background:#fff;padding:16px 18px;border-radius:14px;border:1px solid #eee6cf;
+  display:flex;gap:13px;align-items:flex-start
+}
+.notice-item b{color:var(--green)}
+
+.schedule{overflow-x:auto;background:#fff;border-radius:20px;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th,td{padding:13px;border-bottom:1px solid #e8efed;text-align:center}
+th{background:var(--green);color:#fff}
+tr:nth-child(even) td{background:#f8fbfa}
+
+.message{
+  background:linear-gradient(135deg,#0b5e55,#14766b);color:#fff;border-radius:25px;
+  padding:30px;box-shadow:var(--shadow)
+}
+.message h2{font-size:27px;margin-bottom:12px}
+.message p{opacity:.95}
+.signature{margin-top:18px;color:#ffe4a1;font-weight:bold}
+
+.footer{background:#123f3a;color:#dcebe8;padding:35px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:25px}
+.footer h3{color:#fff;margin-bottom:10px}
+.footer p,.footer a{font-size:14px;color:#c5d9d5}
+.footer-links{display:grid;gap:5px}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:25px;padding-top:15px;text-align:center;font-size:13px}
+
+.back-top{
+  position:fixed;left:18px;bottom:18px;width:45px;height:45px;border-radius:50%;
+  background:var(--green);color:#fff;border:0;box-shadow:var(--shadow);font-size:20px
+}
+
+@media(max-width:800px){
+ .hero-card{grid-template-columns:1fr;padding:24px}
+ .hero-art{min-height:180px}
+ .grid{grid-template-columns:1fr 1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ .topbar .container{justify-content:center;text-align:center}
+ .brand{align-items:flex-start}
+ .logo{width:65px;height:65px}
+ .brand h1{font-size:21px}
+ .brand p{font-size:12px}
+ .hero{padding-top:28px}
+ .hero h2{font-size:29px}
+ .hero p{font-size:15px}
+ .grid,.footer-grid{grid-template-columns:1fr}
+ section{padding:30px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📚 المجلة الإلكترونية المدرسية</span>
+    <span>مدرسة الاقتدار الابتدائية للبنين</span>
+  </div>
+</div>
+
+<header id="home">
+  <div class="container">
+    <div class="brand">
+      <div class="logo" title="مكان شعار المدرسة">
+        <span>شعار<br>المدرسة</span>
+        <!-- عند تجهيز الشعار يمكن استبدال النص بالصورة:
+        <img src="logo.png" alt="شعار مدرسة الاقتدار">
+        -->
+      </div>
+      <div>
+        <h1>مدرسة الاقتدار الابتدائية للبنين</h1>
+        <p>المجلة الإلكترونية المدرسية — للصفين الرابع والخامس الابتدائي</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="active" href="#home">الرئيسية</a>
+    <a href="#contents">الفهرس</a>
+    <a href="#director">كلمة المدير</a>
+    <a href="#fourth">الصف الرابع</a>
+    <a href="#fifth">الصف الخامس</a>
+    <a href="#activities">نشاطات التلاميذ</a>
+    <a href="#teachers">مقالات المعلمين</a>
+    <a href="#announcements">الإعلانات</a>
+    <a href="#schedule">الجدول الأسبوعي</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="hero-card">
+      <div>
+        <span class="badge">الإصدار الأسبوعي</span>
+        <h2>أهلًا بكم في مجلتنا المدرسية</h2>
+        <p>
+          مساحة تعليمية مدرسية تجمع الدروس والأنشطة والإعلانات والمحتوى
+          اللغوي بأسلوب واضح وجميل يخدم تلاميذ الصفين الرابع والخامس الابتدائي.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contents">تصفح المجلة</a>
+          <a class="btn btn-light" href="#announcements">آخر الإعلانات</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div>
+          <strong>📖</strong>
+          <span>العلم • اللغة • الإبداع</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contents">
+  <div class="container">
+    <div class="section-title">
+      <div>
+        <h2>الفهرس</h2>
+        <p>أهم أقسام المجلة في إصدارها الجديد</p>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="#director"><div class="icon">🎓</div><h3>كلمة المدير</h3><p>كلمة تربوية وتوجيهية لأبنائنا التلاميذ.</p></a>
+      <a class="card" href="#fourth"><div class="icon">📘</div><h3>الصف الرابع</h3><p>محتوى اللغة العربية والأنشطة الخاصة بالصف الرابع.</p></a>
+      <a class="card" href="#fifth"><div class="icon">📗</div><h3>الصف الخامس</h3><p>دروس وقواعد وقراءة وأنشطة الصف الخامس.</p></a>
+      <a class="card" href="#activities"><div class="icon">🌟</div><h3>نشاطات التلاميذ</h3><p>إبداعات ومشاركات أبنائنا التلاميذ.</p></a>
+      <a class="card" href="#teachers"><div class="icon">👨‍🏫</div><h3>مقالات المعلمين</h3><p>مقالات تربوية ولغوية مختارة من الكادر التعليمي.</p></a>
+      <a class="card" href="#announcements"><div class="icon">📢</div><h3>الإعلانات المدرسية</h3><p>تنبيهات وإعلانات مهمة للتلاميذ وأولياء الأمور.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="director">
+  <div class="container">
+    <div class="message">
+      <h2>كلمة المدير</h2>
+      <p>
+        أبنائي التلاميذ، نرحب بكم في مجلتكم الإلكترونية المدرسية، التي نطمح من
+        خلالها إلى تقديم المعرفة بصورة جميلة وميسرة، وتشجيعكم على القراءة
+        والتعبير والإبداع. إن المدرسة بيت العلم والتربية، وبجهودكم ومثابرتكم
+        نصنع مستقبلًا أكثر إشراقًا.
+      </p>
+      <div class="signature">إدارة مدرسة الاقتدار الابتدائية للبنين</div>
+    </div>
+  </div>
+</section>
+
+<section id="fourth">
+  <div class="container">
+    <div class="section-title">
+      <div><h2>الصف الرابع الابتدائي</h2><p>اللغة العربية</p></div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="icon">📚</div><h3>القراءة</h3><p>دروس القراءة والفهم والمناقشة والتدريب على التعبير.</p></div>
+      <div class="card"><div class="icon">✍️</div><h3>القواعد</h3><p>موضوعات القواعد مع أمثلة وتطبيقات صفية وبيتية.</p></div>
+      <div class="card"><div class="icon">🖊️</div><h3>الإملاء والإنشاء</h3><p>تدريبات إملائية وموضوعات إنشائية مناسبة للتلاميذ.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fifth" style="background:#edf7f5">
+  <div class="container">
+    <div class="section-title">
+      <div><h2>الصف الخامس الابتدائي</h2><p>اللغة العربية</p></div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="icon">📖</div><h3>القراءة والمحفوظات</h3><p>نصوص مختارة وأسئلة ومهارات الفهم والحفظ.</p></div>
+      <div class="card"><div class="icon">🔤</div><h3>القواعد</h3><p>شرح مبسط للقواعد مع أمثلة وتطبيقات عملية.</p></div>
+      <div class="card"><div class="icon">📝</div><h3>الإملاء والإنشاء</h3><p>تدريبات منظمة لتنمية الكتابة والتعبير السليم.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="container">
+    <div class="section-title">
+      <div><h2>نشاطات التلاميذ</h2><p>من إبداعات أبنائنا في المدرسة</p></div>
+    </div>
+    <div class="card">
+      <h3>🌟 مساحة إبداعية</h3>
+      <p>
+        ستُضاف هنا مشاركات التلاميذ من موضوعات إنشائية ورسومات وقراءات
+        وأنشطة لغوية بعد اعتمادها من المدرسة.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="teachers" style="background:#fff">
+  <div class="container">
+    <div class="section-title">
+      <div><h2>مقالات المعلمين</h2><p>محتوى تربوي ولغوي</p></div>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="icon">💡</div><h3>التعلم بالقراءة</h3><p>مقال تربوي يمكن تحديثه من لوحة التحكم لاحقًا.</p></div>
+      <div class="card"><div class="icon">🧠</div><h3>مهارات اللغة العربية</h3><p>إرشادات تساعد التلاميذ على تحسين القراءة والكتابة.</p></div>
+      <div class="card"><div class="icon">🏫</div><h3>رسالة تربوية</h3><p>مساحة مخصصة لمقالات الكادر التعليمي.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="announcements">
+  <div class="container">
+    <div class="section-title">
+      <div><h2>الإعلانات المدرسية</h2><p>آخر التنبيهات والمواعيد المهمة</p></div>
+    </div>
+    <div class="notice-list">
+      <div class="notice-item notice"><span>📢</span><div><b>إعلان جديد</b><br>سيتم تحديث الإعلانات المدرسية من لوحة التحكم في النسخة القادمة.</div></div>
+      <div class="notice-item"><span>📌</span><div><b>تنبيه للتلاميذ</b><br>يرجى متابعة المجلة بصورة مستمرة لمعرفة الواجبات والتنبيهات.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" style="background:#edf7f5">
+  <div class="container">
+    <div class="section-title">
+      <div><h2>الجدول الأسبوعي</h2><p>الأحد إلى الخميس</p></div>
+    </div>
+    <div class="schedule">
+      <table>
+        <thead>
+          <tr><th>الساعة</th><th>الأحد</th><th>الاثنين</th><th>الثلاثاء</th><th>الأربعاء</th><th>الخميس</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>الأولى</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>الثانية</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>الثالثة</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>الرابعة</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>الخامسة</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>موقع المدرسة</h3>
+        <p>سيتم وضع رابط موقع المدرسة هنا.</p>
+        <!-- ضع رابط خرائط المدرسة هنا لاحقًا -->
+      </div>
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>واتساب</h3>
+        <p>سيتم وضع رابط التواصل أو قناة المدرسة هنا.</p>
+      </div>
+      <div class="card">
+        <div class="icon">👁️</div>
+        <h3>زوار المجلة</h3>
+        <p>عداد الزوار الحقيقي سيُضاف عند نشر الموقع وربطه بخدمة تخزين.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>مدرسة الاقتدار الابتدائية للبنين</h3>
+        <p>المجلة الإلكترونية المدرسية — منصة تعليمية لخدمة التلاميذ وأولياء الأمور والكادر التعليمي.</p>
+      </div>
+      <div>
+        <h3>روابط المجلة</h3>
+        <div class="footer-links">
+          <a href="#home">الرئيسية</a>
+          <a href="#fourth">الصف الرابع</a>
+          <a href="#fifth">الصف الخامس</a>
+          <a href="#announcements">الإعلانات</a>
+        </div>
+      </div>
+      <div>
+        <h3>التواصل</h3>
+        <p>موقع المدرسة — واتساب — إعلانات المدرسة</p>
+      </div>
+    </div>
+    <div class="copy">© 2026 مدرسة الاقتدار الابتدائية للبنين — جميع الحقوق محفوظة</div>
+  </div>
+</footer>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="العودة إلى الأعلى">↑</button>
+
+<script>
+document.querySelectorAll('.nav-inner a').forEach(link=>{
+  link.addEventListener('click',()=>{
+    document.querySelectorAll('.nav-inner a').forEach(x=>x.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
